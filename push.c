@@ -10,7 +10,7 @@
 void push(stack_t **h, unsigned int line_number)
 {
 	char *push_arg;
-	int data;
+	unsigned int data, i;
 	stack_t *new;
 
 	push_arg = strtok(NULL, " \t\n");
@@ -19,6 +19,21 @@ void push(stack_t **h, unsigned int line_number)
 		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
+
+	i = 0;
+	if (push_arg[i] == '-')
+		i++;
+	for (; push_arg[i] != '\0'; i++)
+	{
+		if (push_arg[i] > 57 || push_arg[i] < 48)
+			break;
+	}
+	if (i < strlen(push_arg))
+	{
+		fprintf(stderr, "L%u: usage: push integer\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+
 	data = atoi(push_arg);
 
 	new = malloc(sizeof(stack_t));
