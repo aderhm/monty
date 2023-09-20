@@ -16,7 +16,7 @@ void push(stack_t **h, unsigned int line_number)
 	push_arg = strtok(NULL, " \t\n");
 	if (!push_arg)
 	{
-		fprintf(stderr, "L%u: usage: push <int>\n", line_number);
+		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	data = atoi(push_arg);
