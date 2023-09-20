@@ -50,6 +50,7 @@ int main(int argc, char **argv)
 		line_number++;
 	}
 
+	free(line);
 	free_ds(stack);
 	fclose(file);
 

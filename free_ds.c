@@ -13,7 +13,7 @@ void free_ds(stack_t *h)
 	while (h)
 	{
 		current = h;
-		free(current);
 		h = h->next;
+		free(current);
 	}
 }
