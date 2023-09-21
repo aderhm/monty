@@ -11,7 +11,10 @@ void pstr(stack_t **h, unsigned int line_number)
 {
 	(void)line_number;
 	if (!(*h))
+	{
 		fprintf(stdout, "\n");
+		return;
+	}
 
 	while (*h && ((*h)->n > 0 && (*h)->n <= 127))
 	{
