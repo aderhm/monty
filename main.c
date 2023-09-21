@@ -41,7 +41,7 @@ int main(int argc, char **argv)
 	while (getline(&line, &length, file) != -1)
 	{
 		instruction = strtok(line, " \t\n");
-		if (instruction)
+		if (instruction && strncmp(instruction, "#", 1))
 		{
 			instruction_found = 0;
 			for (i = 0; oc[i].opcode != NULL; i++)
