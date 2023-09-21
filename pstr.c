@@ -9,17 +9,15 @@
  */
 void pstr(stack_t **h, unsigned int line_number)
 {
-	(void)line_number;
-	if (!(*h))
-	{
-		fprintf(stdout, "\n");
-		return;
-	}
+	stack_t *temp;
 
-	while (*h && ((*h)->n > 0 && (*h)->n <= 127))
+	(void)line_number;
+
+	temp = *h;
+	while (temp && (temp->n > 0 && temp->n <= 127))
 	{
-		fprintf(stdout, "%c", (*h)->n);
-		*h = (*h)->next;
+		fprintf(stdout, "%c", temp->n);
+		temp = temp->next;
 	}
 	fprintf(stdout, "\n");
 }
