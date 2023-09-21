@@ -44,5 +44,6 @@ void free_ds(stack_t *h);
 void pint(stack_t **h, unsigned int line_number);
 void pop(stack_t **h, unsigned int line_number);
 void swap(stack_t **h, unsigned int line_number);
+void add(stack_t **h, unsigned int line_number);
 
 #endif /* MONTY_H */
