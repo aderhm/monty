@@ -13,6 +13,7 @@ instruction_t oc[] = {
 	{"mul", mul},
 	{"mod", mod},
 	{"pchar", pchar},
+	{"pstr", pstr},
 	{NULL, NULL}
 };
 
