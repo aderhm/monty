@@ -8,6 +8,7 @@ instruction_t oc[] = {
 	{"swap", swap},
 	{"add", add},
 	{"nop", nop},
+	{"sub", sub},
 	{NULL, NULL}
 };
 
