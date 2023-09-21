@@ -11,6 +11,7 @@ instruction_t oc[] = {
 	{"sub", sub},
 	{"div", divv},
 	{"mul", mul},
+	{"mod", mod},
 	{NULL, NULL}
 };
 

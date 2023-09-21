@@ -1,20 +1,20 @@
 #include "monty.h"
 
 /**
- * divv - divides the second top element of the stack
- * by the top element of the stack.
+ * mod - computes the rest of the division of the second top element
+ * of the stack by the top element of the stack.
  * @h: doubly linked list.
  * @line_number: line number.
  *
  * Return: void.
  */
-void divv(stack_t **h, unsigned int line_number)
+void mod(stack_t **h, unsigned int line_number)
 {
 	stack_t *first, *second;
 
 	if (!(*h) || !((*h)->next))
 	{
-		fprintf(stderr, "L%u: can't div, stack too short\n", line_number);
+		fprintf(stderr, "L%u: can't mod, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
@@ -27,7 +27,7 @@ void divv(stack_t **h, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	second->n /= first->n;
+	second->n %= first->n;
 
 	*h = second;
 
