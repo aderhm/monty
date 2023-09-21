@@ -3,6 +3,7 @@
 instruction_t oc[] = {
 	{"push", push},
 	{"pall", pall},
+	{"pint", pint},
 	{NULL, NULL}
 };
 
