@@ -9,6 +9,7 @@ instruction_t oc[] = {
 	{"add", add},
 	{"nop", nop},
 	{"sub", sub},
+	{"div", divv},
 	{NULL, NULL}
 };
 

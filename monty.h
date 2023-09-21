@@ -47,5 +47,6 @@ void swap(stack_t **h, unsigned int line_number);
 void add(stack_t **h, unsigned int line_number);
 void nop(stack_t **h, unsigned int line_number);
 void sub(stack_t **h, unsigned int line_number);
+void divv(stack_t **h, unsigned int line_number);
 
 #endif /* MONTY_H */
