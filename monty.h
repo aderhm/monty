@@ -42,5 +42,6 @@ void pall(stack_t **h, unsigned int line_number);
 void perr_fce(FILE *f, char *line, char *inst, unsigned int ln);
 void free_ds(stack_t *h);
 void pint(stack_t **h, unsigned int line_number);
+void pop(stack_t **h, unsigned int line_number);
 
 #endif /* MONTY_H */
